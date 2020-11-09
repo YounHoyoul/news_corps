@@ -1,0 +1,28 @@
+{
+  "name": "news_corps_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "autoprefixer": "^9.4.7",
+    "cssnano": "^4.1.8",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "up": "docker-compose up -d && npm run import-db ",
+    "down": "npm run export-db && docker-compose down",
+    "ssh": "docker exec -it news_corps_wordpress_1 /bin/bash",
+    "view-db": "docker exec -it news_corps_db_1 mysql -u root --password=root client_db",
+    "import-db": "docker exec -i news_corps_db_1 mysql -u root --password=root client_db < ./db/backup.sql",
+    "export-db": "docker exec news_corps_db_1 /usr/bin/mysqldump -u root --password=root client_db > ./db/backup.sql"
+  }
+}

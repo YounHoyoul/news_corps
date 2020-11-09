@@ -1,0 +1,149 @@
+/*
+Theme Name: News Corps Empty Theme
+Author: Luis
+*/
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+    font-family: serif;
+}
+
+.banner {
+    background-image: url("/wp-content/themes/empty/images/header_image.png");
+    background-size: cover;
+    background-position: center bottom;
+    min-height: 380px;
+    position: relative;
+}
+
+.banner .hero {
+    position: absolute;
+    bottom: 40px;
+    width: 500px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);    
+}
+
+@media only screen and (max-width: 600px) {
+    .banner  .hero {
+        width: 100%;
+    }
+}
+
+button {
+    background: #007cba;
+    color: #fff;
+    border: 0;
+    border-radius: 0 !important;
+    padding: 0.5rem 1.5rem;
+}
+
+button:hover {
+    background: #006ba1;
+}
+
+button.btn-lg {
+    padding: 0.5rem 2rem;
+}
+
+.logos {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 805px;
+}
+
+@media only screen and (max-width: 992px) {
+    .logos {
+        width: 402px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .logos {
+        width: 200px;
+    }
+}
+
+.logos li {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos li img{
+    width: 180px;
+}
+
+.logos li + li {
+    border-left: 1px solid #cdcdcd;
+}
+
+.logos.lower  li {
+    border-top: 1px solid #cdcdcd;
+}
+
+@media only screen and (max-width: 992px) {
+    .logos li:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid #cdcdcd;
+    }
+
+    .logos li:nth-child(4) {
+        border-top: 1px solid #cdcdcd;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .logos li:nth-child(2) {
+        border-left: 0;
+        border-top: 1px solid #cdcdcd;
+    }
+
+    .logos li:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid #cdcdcd;
+    }
+
+    .logos li:nth-child(4) {
+        border-left: 0;
+        border-top: 1px solid #cdcdcd;
+    }
+}
+  
+.form-section {
+    width: 600px;
+    padding: 50px 40px 100px;
+    background: #efefef;
+    border: 1px solid #cdcdcd;
+    margin: 50px auto;
+}
+
+.form-section .error {
+    color : red;
+}
+
+@media only screen and (max-width: 650px) {
+    .form-section {
+        width: 90%;
+    }
+}
+
+footer {
+    background: #26273f;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    footer img {    
+      width: 80%;
+    }
+}
