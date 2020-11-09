@@ -3,10 +3,10 @@
 git clone https://github.com/YounHoyoul/news_corps.git
 cd news_corps
 npm install
-cd themes/empty
+cd wp-content/themes/empty
 npm install
 npm run build
-cd ../../
+cd ../../../
 npm run up
 ```
 # How to stop the system
